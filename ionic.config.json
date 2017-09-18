@@ -1,0 +1,8 @@
+{
+  "name": "HelperRunning",
+  "app_id": "4363c81c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

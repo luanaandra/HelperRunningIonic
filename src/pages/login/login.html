@@ -1,0 +1,28 @@
+<!-- src/pages/login/login.html -->
+
+<ion-header>
+
+
+</ion-header>
+
+<ion-content padding class="myview">
+  <div>
+    <ion-img class="teste2" width="150" height="80" src="assets/image/Logo.png"></ion-img>
+  </div>
+  <form class="align" >
+    <ion-item class="teste">
+      <ion-label stacked>Email</ion-label>
+      <ion-input stacked [(ngModel)]="email" name="email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="teste">
+      <ion-label stacked>Senha</ion-label>
+      <ion-input stacked [(ngModel)]="senha" name="senha" type="password"></ion-input>
+    </ion-item>
+
+    <button class="enterA" ion-button block (click)="login()">ENTRAR</button>
+  <h1 class="letter"> Não tem uma conta? Cadastre-se.</h1>
+  </form>
+  
+
+</ion-content>
