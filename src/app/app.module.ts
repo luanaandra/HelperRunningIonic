@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import {LoginPagePage} from '../pages/login/login';
 import {UsuarioService} from '../domain/usuario/usuario-service';
 
+import {TabsPage} from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { RegisterPagePage } from '../pages/register/register';
 
@@ -13,6 +14,7 @@ import { RegisterPagePage } from '../pages/register/register';
   declarations: [
     MyApp,
     HomePage,
+    TabsPage,
     RegisterPagePage,
     LoginPagePage
 
@@ -24,6 +26,7 @@ import { RegisterPagePage } from '../pages/register/register';
   entryComponents: [
     MyApp,
     HomePage,
+    TabsPage,
     RegisterPagePage,
     LoginPagePage
   ],

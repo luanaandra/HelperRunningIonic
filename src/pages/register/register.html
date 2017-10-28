@@ -23,6 +23,8 @@
 </ion-item>
   </ion-list>
 
+  <img [src]="getImage(item)" width="50" class="imageView" alt="">
+
   <button class="buttons" color="coral" ion-button full (click)="selectFromGallery()">Galeria</button>
   <button  class="buttons"color="coral" ion-button full (click)="takePicture()">Câmera</button>
   <button class="buttons" color="turquese" ion-button full>Salvar</button>
