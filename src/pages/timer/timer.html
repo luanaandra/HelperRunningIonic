@@ -1,0 +1,43 @@
+<ion-card class="card" *ngIf="timer">
+    <ion-item class="no-bottom-border item">
+        <button ion-button *ngIf="timeInSeconds && timeInSeconds > 0" large full clear class="timer-button timer-text">{{timer.displayTime}}</button>
+    </ion-item>
+    <ion-item class="no-bottom-border" *ngIf="timeInSeconds && timeInSeconds > 0">
+        <button ion-button icon-left clear color="danger" small (click)="initTimer()" item-left *ngIf="!timer.runTimer && (timer.hasStarted || timer.hasFinished) || timer.hasFinished">
+            <ion-icon name="refresh"></ion-icon>
+            Reset
+        </button>
+        <button  color="turquese" ion-fab icon-center clear small (click)="pauseTimer()" item-right *ngIf="timer.runTimer && timer.hasStarted && !timer.hasFinished">
+            <ion-icon class="icon-color" name="pause"></ion-icon>
+         
+        </button>      
+        <button color="turquese" ion-fab icon-center clear small (click)="resumeTimer()" item-right *ngIf="!timer.runTimer && timer.hasStarted && !timer.hasFinished">
+            <ion-icon class="icon-color" name="play"></ion-icon>
+         
+        </button>      
+        <button color="turquese" ion-fab icon-center clear small (click)="startTimer()" item-right *ngIf="!timer.hasStarted">
+            <ion-icon class="icon-color" name="play"></ion-icon>
+       
+        </button>            
+    </ion-item>
+</ion-card>  
+ 
+<style>
+  .timer-button {
+    margin-top: 80%;
+    font-size: 5rem !important;
+    height: 1em !important;
+    color: #c0392b;
+  }
+
+  .card {
+    height: 410px;
+  }
+  
+  .no-bottom-border.item .item-inner {
+      border-bottom: none !important;
+  }
+  .icon-color{
+    color:white;
+  }
+</style>

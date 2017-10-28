@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ViewChild } from '@angular/core';
+import { TimerComponent } from '../timer/timer';
 
 /*
   Generated class for the ChronometerPage page.
@@ -13,10 +15,14 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ChronometerPagePage {
 
+ @ViewChild(TimerComponent) timer: TimerComponent;
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChronometerPagePage');
-  }
+ ngOnInit() {
+    setTimeout(() => {
+      this.timer.startTimer();
+    }, 1000)
+ }
 
 }
