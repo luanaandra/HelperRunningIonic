@@ -11,15 +11,15 @@
   <ion-list>
 		<ion-item>
 			<ion-label floating> Nome </ion-label>
-			<ion-input type="text" [(ngModel)]="desejo"></ion-input>
+			<ion-input type="text" [(ngModel)]="name"></ion-input>
 		</ion-item>
 		<ion-item>
 			<ion-label floating> Local </ion-label>
-			<ion-input type="text" [(ngModel)]="desc"></ion-input>
+			<ion-input type="text" [(ngModel)]="local"></ion-input>
 		</ion-item>
     <ion-item>
   <ion-label floating>Data</ion-label>
-  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data"></ion-datetime>
 </ion-item>
   </ion-list>
 
@@ -27,5 +27,5 @@
 
   <button class="buttons" color="coral" ion-button full (click)="selectFromGallery()">Galeria</button>
   <button  class="buttons"color="coral" ion-button full (click)="takePicture()">Câmera</button>
-  <button class="buttons" color="turquese" ion-button full>Salvar</button>
+  <button class="buttons" color="turquese" ion-button full (click)="saveItem()">Salvar</button>
 </ion-content>

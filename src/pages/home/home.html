@@ -7,15 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <img src="assets/image/obelisco.jpg" />
+  <ion-card *ngFor="let item of items; let i=index">
+   <img [src]="getImage(item)" alt="">
     <ion-card-content>
       <ion-card-title>
-        Corrida no Obelisco
+        {{item.name}}
       </ion-card-title>
       <p>
-        Data: blabla Local: blabla
-
+        {{item.local}} {{item.data}}
       </p>
     </ion-card-content>
   </ion-card>

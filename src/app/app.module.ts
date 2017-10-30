@@ -10,6 +10,7 @@ import {TabsPage} from '../pages/tabs/tabs';
 import { TimerComponent } from '../pages/timer/timer'
 import { HomePage } from '../pages/home/home';
 import { RegisterPagePage } from '../pages/register/register';
+import { DataServiceProvider } from '../providers/data-service/data-service';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { RegisterPagePage } from '../pages/register/register';
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsuarioService
+    UsuarioService,
+    DataServiceProvider
     ]
 })
 export class AppModule {}
